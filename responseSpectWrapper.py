@@ -1,6 +1,6 @@
 import ctypes
 ll=ctypes.cdll.LoadLibrary
-lib_responseSpect=ll("responseSpect.responseSpect.dll")
+lib_responseSpect=ll("responseSpect.dll")
 lib_responseSpect.responseSpect.restype=None
 lib_responseSpect.responseSpect.argtypes=(ctypes.c_double,ctypes.c_double,ctypes.POINTER(ctypes.c_double),\
 	ctypes.POINTER(ctypes.c_double),ctypes.c_int,ctypes.c_int,ctypes.c_double,ctypes.POINTER(ctypes.c_double),ctypes.POINTER(ctypes.c_double),\

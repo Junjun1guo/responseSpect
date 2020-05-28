@@ -1,4 +1,4 @@
-from responseSpect.responseSpectWrapper import returnSaSvSd
+from responseSpectWrapper import returnSaSvSd
 import numpy as np
 
 def SaSvSd(acc,dt,T,beta):

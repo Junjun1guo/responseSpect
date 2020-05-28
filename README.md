@@ -3,7 +3,7 @@ acceleration,velocity and displacement response spectra calculation
 
 ## Install    [the package in PyPI](https://pypi.org/project/responseSpect/)
 
-After installation through python script, then go python site-package, and find the responseSpect module. Copy responseSpect.dll to your working directory. 
+After installation through python script, then go to python site-package, and find the responseSpect module. Copy responseSpect.dll to your working directory. 
 
 The followings are the basic example of using responseSpect.
 

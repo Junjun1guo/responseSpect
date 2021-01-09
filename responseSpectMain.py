@@ -1,3 +1,10 @@
+#-*-coding: UTF-8-*-
+#########################################################################
+#  Author: Junjun Guo
+#  E-mail: guojj@tongji.edu.cn/guojj_ce@163.com
+#  Environemet: Successfully excucted in python 3.8
+#########################################################################
+#import necessary modules
 from responseSpectWrapper import returnSaSvSd
 import numpy as np
 

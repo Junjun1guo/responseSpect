@@ -1,10 +1,22 @@
+#-*-coding: UTF-8-*-
+#########################################################################
+#  Author: Junjun Guo
+#  E-mail: guojj@tongji.edu.cn/guojj_ce@163.com
+#  Environemet: Successfully excucted in python 3.8
+#########################################################################
+#import necessary modules
 import ctypes
 ll=ctypes.cdll.LoadLibrary
-lib_responseSpect=ll("responseSpect.dll")
+try:
+	import os
+	os.add_dll_directory(os.getcwd())
+	lib_responseSpect=ll("responseSpect.dll")
+except:
+	lib_responseSpect=ll("responseSpect.dll")
 lib_responseSpect.responseSpect.restype=None
-lib_responseSpect.responseSpect.argtypes=(ctypes.c_double,ctypes.c_double,ctypes.POINTER(ctypes.c_double),\
-	ctypes.POINTER(ctypes.c_double),ctypes.c_int,ctypes.c_int,ctypes.c_double,ctypes.POINTER(ctypes.c_double),ctypes.POINTER(ctypes.c_double),\
-	ctypes.POINTER(ctypes.c_double))
+lib_responseSpect.responseSpect.argtypes=(ctypes.c_double,ctypes.c_double,ctypes.POINTER(ctypes.c_double),
+	ctypes.POINTER(ctypes.c_double),ctypes.c_int,ctypes.c_int,ctypes.c_double,ctypes.POINTER(ctypes.c_double),
+	ctypes.POINTER(ctypes.c_double),ctypes.POINTER(ctypes.c_double))
 def returnSaSvSd(beta,dt,Tarray,accArray,accLength,Tsizes,m,SaArray,SvArray,SdArray):
 	"""
 	Warper function for calculate acceleration,velocity and displacement response spectra based on C++ dll
